@@ -95,7 +95,7 @@
             fetch() {
                 axios.get('/sensor/fetch')
                     .then(({data}) => {
-                        if (!data.last_celsius) {
+                        if (!data.address) {
                             this.error = true;
                         }
 
