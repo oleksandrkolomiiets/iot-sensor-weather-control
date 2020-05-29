@@ -67,7 +67,7 @@ class HomeController extends Controller
         if ($sensor = Auth::user()->sensor()->first()) {
             $sensor->update($request->validated());
         } else {
-            Auth::user()->sensor()->create($result->validated());
+            Auth::user()->sensor()->create($request->validated());
         }
 
         return redirect('dashboard');
